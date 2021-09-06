@@ -65,6 +65,23 @@ public class SwaggerConfig {
 
     }
     
+    @Bean
+    public Docket apiV3() {
+        version = "V3";
+        title = "Order API " + version;
+
+        return new Docket(DocumentationType.SWAGGER_2)
+                .useDefaultResponseMessages(false)
+                .groupName(version)
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.sample.web.controller"))
+                .paths(PathSelectors.ant("/v3/api/**"))
+                .build()
+                .apiInfo(apiInfo());
+        		//.apiInfo(apiInfo(title, version));
+
+    }
+    
     /**
      * 해당 api에 대한 정보 
      * @return
