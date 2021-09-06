@@ -35,6 +35,16 @@ public class SwaggerConfig {
         version = "V1";
         title = "Board API " + version;
 
+        /*
+        List<Parameter> globalParamters = new ArrayList<>();
+        globalParamters.add( new ParameterBuilder() //ParameterBuilder - 전역 파라미터 설정 
+    	        .name("webType").description("store type  Ko, Jp, En, Cn")
+    	        .defaultValue("Ko")
+    	        .modelRef(new ModelRef("string"))
+    	        .parameterType("path")
+    	        .required(true)
+    	        .build());
+        */
         return new Docket(DocumentationType.SWAGGER_2)
                 .useDefaultResponseMessages(false)
                 .groupName(version)

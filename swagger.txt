@@ -1,9 +1,28 @@
-https://github.com/jaewon0913/springboot-swagger
+1.https://github.com/jaewon0913/springboot-swagger
+board
 
+2.https://github.com/sharplee7/swagger-demo/
+order
 
 https://sharplee7.tistory.com/48
-
 
 https://kim-jong-hyun.tistory.com/49
 
 https://dev-jwblog.tistory.com/20
+
+
+https://kim-jong-hyun.tistory.com/49
+* @ApiOperation - 해당 API에 대한 간단한 설명 기록
+	@ApiOperation(value = "Board 조회", notes ="BoardNo에 해당하는 특정 글 조회")
+* @ApiImplicitParam - 해당 파라미터의 의미 설명/해당 파라미터 명은 무엇이고 파라미터 값은 어떤 의미인지 확인 가능 
+
+	@ApiImplicitParams(
+			@ApiImplicitParam(name= "board", value="Board의 model 형태에 해당하는 JSON 문자열(boardNo는 지우고 작성)", paramType = "body", dataType = "Board")
+	)
+	
+* @ApiIgnore - 해당 정보는 화면에 나오지 않는다. 클라이언트로 부터 공유하고 싶지 않은 곳에 선언
+
+@RequestBody - json포멧으로 데이터 입력 가능/요청을 하게 되면 content-type = application/json으로 바뀌고 request body에 데이터가 담겨 전송된다.
+
+
+	

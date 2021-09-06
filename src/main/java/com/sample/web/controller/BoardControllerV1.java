@@ -3,6 +3,8 @@ package com.sample.web.controller;
 import java.io.IOException;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,11 +36,13 @@ import io.swagger.annotations.ApiResponses;
 @RequestMapping("/v1/api")
 public class BoardControllerV1 {
 	
+	private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
+	
 	
 	@Autowired
 	BoardService boardService;
 	
-	@ApiOperation(value = "Board 전체 목록", notes = "Board 전체 목록을 조회")
+	@ApiOperation(value = "Board 전체 목록", notes = "Board 전체 목록을 조회")//해당 API에 대한 간단한 설명 기록 
 	@GetMapping(value = "/board")
 	public ResponseEntity<List<Board>> getAllMembers() {
 		return new ResponseEntity<>(boardService.getAllBoards(), HttpStatus.OK);
