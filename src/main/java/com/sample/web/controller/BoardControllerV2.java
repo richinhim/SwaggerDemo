@@ -19,6 +19,7 @@ import io.swagger.annotations.ApiResponses;
 @RequestMapping("/v2/api")
 public class BoardControllerV2 {
 
+	
 	@ApiOperation(value = "exam", notes = "에러 메시지 ")
 	@ApiResponses({
 		 @ApiResponse(code = 200, message = "OK !!"),

@@ -34,6 +34,7 @@ import io.swagger.annotations.ApiResponses;
 @RequestMapping("/v1/api")
 public class BoardControllerV1 {
 	
+	
 	@Autowired
 	BoardService boardService;
 	

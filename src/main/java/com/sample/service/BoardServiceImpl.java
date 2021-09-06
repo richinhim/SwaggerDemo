@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.sample.model.Board;
 
 
+
 @Service(value = "boardService")
 public class BoardServiceImpl implements BoardService{
 

@@ -10,4 +10,5 @@ public interface BoardService {
 	boolean insertBoard(Board board);
 	boolean updateBoard(Board board);
 	boolean deleteBoardByBoardNo(int boardNo);
+	
 }

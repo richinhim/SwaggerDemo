@@ -11,5 +11,6 @@ public class exampleController {
 //	public String viewPage() {
 //		return "index";
 //	}
+	
 }
 
